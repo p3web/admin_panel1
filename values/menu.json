@@ -1,0 +1,36 @@
+{
+  "items":[ {
+          "name":"General",
+          "items":[{
+                  "icon":"fa fa-home",
+                  "name":"Home",
+                  "items":[{
+                      "link":"#pages/test",
+                      "name":"test"
+                  },
+                    {
+                    "url":"https://www.google.com/",
+                    "name":"google"
+                  },
+                    {
+                      "url":"https://www.google.com/",
+                      "name":"google"
+                    }]
+            },{
+            "icon":"fa fa-home",
+            "name":"majid",
+            "items":[{
+              "url":"https://www.google.com/",
+              "name":"google"
+            },
+              {
+                "url":"https://www.google.com/",
+                "name":"google"
+              },
+              {
+                "url":"https://www.google.com/",
+                "name":"google"
+              }]
+          }]
+  }]
+}
