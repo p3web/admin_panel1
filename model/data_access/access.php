@@ -1,6 +1,7 @@
 <?php
+
 //try {
-require_once 'model/database/data.php';
+require_once '../model/database/data.php';
 
 
 //catch (Exception $e){

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CyberDEV  </title>
+
+
+    <script src="template/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="template/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="template/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="template/vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- Animate.css -->
+    <link href="template/vendors/animate.css/animate.min.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="template/build/css/custom.min.css" rel="stylesheet">
+
+    <script src="plugin/global/main.js"></script>
+
+    <!-- include AJX file -->
+    <script src="plugin/network/ajax.js"></script>
+
+    <!-- include lang file -->
+    <script src="plugin/lang/lang.js"></script>
+
+    <script src="plugin/datavalidation/validate.min.js"></script>
+    <script src="plugin/datavalidation/datavalid.js"></script>
+
+    <script src="template/js/page_func/login_page.js"></script>
+
+
+
+    <script type="text/javascript">
+
+        var __lang = undefined;
+        ajax.getJSON('lang','values/lang/fa.json');
+
+        setTimeout(function(){
+            __lang = new lang(ajax.data.lang);
+            ajax.data.lang = undefined ;
+        }, 1000);
+
+    </script>
+
+
+
+    <script src="plugin/sweetalert/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="plugin/sweetalert/sweetalert2.min.css">
+    <script src="plugin/sweetalert/msg.js"></script>
+
+</head>
+
+<body class="login">
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+    <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="login_content">
+                <form>
+                    <h1><i class="fa fa-cog fa-spin fa-fw"></i>Login</h1>
+                    <div>
+                        <input id="txt_email" type="email" class="form-control" placeholder="Email" required="" />
+                    </div>
+                    <div>
+                        <input id="txt_pass" type="password" class="form-control" placeholder="Password" required="" />
+                    </div>
+                    <div>
+                        <a class="btn btn-default submit" href="#" onclick="btn_login()">Login</a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+                        <p class="change_link">www.syberdev.com
+                        </p>
+
+                        <div class="clearfix"></div>
+                        <br />
+
+                        <div>
+                            <h1><i class="fa fa-users"></i> CyberDEV</h1>
+                            <p>©2017-2019 All Rights Reserved. Privacy and Terms</p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+</html>

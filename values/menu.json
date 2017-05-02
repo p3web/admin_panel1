@@ -2,35 +2,40 @@
   "items":[ {
           "name":"General",
           "items":[{
-                  "icon":"fa fa-home",
-                  "name":"Home",
+                  "icon":"fa fa-sticky-note",
+                  "name":"Articles",
                   "items":[{
-                      "link":"#pages/test",
-                      "name":"test"
-                  },
-                    {
-                    "url":"https://www.google.com/",
-                    "name":"google"
-                  },
-                    {
-                      "url":"https://www.google.com/",
-                      "name":"google"
-                    }]
+                      "link":"#pages/Articles",
+                      "name":"list"
+                  }]
             },{
-            "icon":"fa fa-home",
-            "name":"majid",
+            "icon":"fa fa-server",
+            "name":"Pages",
             "items":[{
               "url":"https://www.google.com/",
-              "name":"google"
-            },
-              {
-                "url":"https://www.google.com/",
-                "name":"google"
-              },
-              {
-                "url":"https://www.google.com/",
-                "name":"google"
-              }]
+              "name":"list"
+            }]
+            },{
+            "icon":"fa fa-sort-amount-asc",
+            "name":"Menus",
+            "items":[{
+              "url":"https://www.google.com/",
+              "name":"list"
+            }]
+            },{
+            "icon":"fa fa-map-marker",
+            "name":"Maps",
+            "items":[{
+              "url":"https://www.google.com/",
+              "name":"list"
+            }]
+          },{
+            "icon":"fa fa-users",
+            "name":"CyberDEV",
+            "items":[{
+              "url":"https://www.google.com/",
+              "name":"site"
+            }]
           }]
   }]
 }

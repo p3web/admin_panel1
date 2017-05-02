@@ -2,21 +2,20 @@
  * Created by peymanvalikhanli on 4/17/17 AD.
  */
 var ajax = {
-    url : "http://elec-store.com/api.php"
+    url : "http://elec-store.com/adminpanel/admin_panel1/controller/index.php"
     ,data : {}
 };
 
 ajax.get_data=function(data){
 
     switch (data.act){
-
         case 'login':
             switch (data.Result){
                 case 'valid':
                     //TODO: set modal message
                     break;
                 case 'login':
-                    var url = "Home.html"
+                    var url = "index.html"
                     window.location.href = url;
                     window.location = url;
                     break;
@@ -33,7 +32,7 @@ ajax.get_data=function(data){
             user= data ;
             break;
         case 'message':
-            dial_box.show(data.title , data.msg ,'close_dialog()' , 'close_dialog()');
+            message.show( data.msg , data.title,data.type, data.btn);
             break;
         case 'Error':
             console.log(data);
@@ -69,25 +68,18 @@ ajax.sender_data =  function(param) {
         data: data_request,
         statusCode: {
             404: function () {
-                alert("404");
-                var a = document.getElementById("txt_email");
-                a.value = "404";
+                message.show("404","error","error");
             },
             403: function () {
-                alert("403");
-                var a = document.getElementById("txt_email");
-                a.value = "403";
+                message.show("403","error","error");
             }
         },
         success: function (data) {
-            //var a = document.getElementById("txt_email");
-            //a.value = data;
             var dd = JSON.parse(data);
             ajax.get_data(dd);
 
         },
-        error: function() {  var a = document.getElementById("txt_email");
-            a.value = "error"; }
+        error: function() {  message.show("AJAX error","error","error"); }
     });
 
 };

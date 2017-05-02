@@ -28,17 +28,17 @@ setTimeout(function(){
 
 
 var loadPage = function(url){
-
-    $.get(url+".html", function(data, status){
-        if (status == 'success') {
-            var html = ejs.render(data, {});
-            var mainPageContent = get_elem_id('page_body');
-            mainPageContent.innerHTML = html;
-        }else{
-            console.log("erorr 404 : cannot open page html file. PSCO log :D");
-        }
-    });
-
+    if(url != "") {
+        $.get(url + ".html", function (data, status) {
+            if (status == 'success') {
+                var html = ejs.render(data, {});
+                var mainPageContent = get_elem_id('page_body');
+                mainPageContent.innerHTML = html;
+            } else {
+                console.log("erorr 404 : cannot open page html file. PSCO log :D");
+            }
+        });
+    }
 }
 
 $(window).on('hashchange', function() {
