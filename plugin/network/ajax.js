@@ -90,3 +90,7 @@ ajax.getJSON = function(index , url) {
         ajax.data[index]= data;
     });
 }
+
+ajax.cllback_getJSON = function(url , callBack){
+    $.getJSON(url, callBack(data));
+}

@@ -1,29 +1,27 @@
 ﻿
 
-
-ajax.getJSON('mnuitem','values/menu.json');
-
-ajax.getJSON('user','values/user.json');
-
-ajax.getJSON('lang','values/lang/fa.json');
-
 var __lang = undefined;
+
+$.getJSON('values/lang/fa.json', function(data){
+    __lang = new lang(data);
+} );
+
+$.getJSON('values/user.json' , function(data){
+    var __user = new users(data);
+    __user.set_img();
+    __user.set_name();
+} );
 
 setTimeout(function(){
 
-    __lang = new lang(ajax.data.lang);
-    ajax.data.lang = undefined ;
-
-    var __menu = new menu(ajax.data.mnuitem.items);
-    __menu.render();
-
-    var __user = new users(ajax.data.user);
-    __user.set_img();
-    __user.set_name();
-
-
+    $.getJSON('values/menu.json' , function(data){
+        var __menu = new menu(data.items);
+        __menu.render();
+    } );
 
 }, 1000);
+
+
 
 
 
@@ -52,4 +50,14 @@ $(window).on('hashchange', function() {
 });
 $(window).trigger("hashchange");
 
+function windows_full_screen() {
 
+    var el = document.documentElement,
+        rfs = el.requestFullscreen
+            || el.webkitRequestFullScreen
+            || el.mozRequestFullScreen
+            || el.msRequestFullscreen
+        ;
+
+    rfs.call(el);
+}

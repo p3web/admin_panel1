@@ -1,5 +1,4 @@
 
-__require("template/vendors/jquery/dist/jquery.min.js"); //jQuery
 __require("plugin/ejs/ejs.js");
 __require("plugin/global/main.js");
 __require("plugin/network/ajax.js");
@@ -18,7 +17,6 @@ __css_require("template/vendors/google-code-prettify/bin/prettify.min.css"); //b
 
 __css_require("template/build/css/custom.min.css"); //Custom styling plus plugins
 
-
 function load_menu(){
     __require("plugin/masterPage/main.js");
 }
@@ -30,10 +28,6 @@ function loader_script(){
  //   __require("template/vendors/nprogress/nprogress.js"); //NProgress
 
     __require("template/build/js/custom.min.js"); //Custom Theme Scripts
-
-
-
-
 
 
 }

@@ -4,9 +4,8 @@
     <title></title>
 	<meta charset="utf-8" />
 
-    <!-- include main js file-->
-    <script src = "plugin/require/js/main.js"></script>
-    <script src="conf.js"></script>
+    <script src="template/vendors/jquery/dist/jquery.min.js"></script>
+
 
 </head>
 <body class="nav-md" onload="load_menu();">
@@ -42,7 +41,7 @@
                         <a data-toggle="tooltip" data-placement="top" title="Settings">
                             <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                         </a>
-                        <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                        <a data-toggle="tooltip" data-placement="top" title="FullScreen" onclick="windows_full_screen()">
                             <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
                         </a>
                         <a data-toggle="tooltip" data-placement="top" title="Lock">
@@ -268,8 +267,14 @@
     </div>
     <!-- /compose -->
 
+
+    <!-- include main js file-->
+    <script src = "plugin/require/js/main.js"></script>
+    <script src="conf.js"></script>
+
+
     <!-- loader_script -->
-    <script type="text/javascript">setTimeout(function(){ loader_script(); }, 2000);</script>
+  <script type="text/javascript">setTimeout(function(){ loader_script(); }, 2000);</script>
 
 
     <div id="page_body_script" style="display: none" >
