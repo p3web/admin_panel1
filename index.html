@@ -4,7 +4,11 @@
     <title></title>
 	<meta charset="utf-8" />
 
+    <!--  JQUERY -->
     <script src="template/vendors/jquery/dist/jquery.min.js"></script>
+    <!--<script src="plugin/jqury/jquery-3.2.1.min.js"></script>-->
+
+
 
 
 </head>
@@ -34,7 +38,7 @@
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
 
                     </div>
-                    <!-- /sidebar menu -->\
+                    <!-- /sidebar menu -->
 
                     <!-- /menu footer buttons -->
                     <div class="sidebar-footer hidden-small">
@@ -268,13 +272,27 @@
     <!-- /compose -->
 
 
+
     <!-- include main js file-->
     <script src = "plugin/require/js/main.js"></script>
     <script src="conf.js"></script>
 
 
     <!-- loader_script -->
-  <script type="text/javascript">setTimeout(function(){ loader_script(); }, 2000);</script>
+  <script type="text/javascript">
+
+      function check_load_jqury(){
+
+          if(jQuery.isReady) {
+              loader_script();
+          }else{
+              setTimeout(function () {
+                  check_load_jqury();
+              }, 100);
+          }
+      }
+      check_load_jqury();
+  </script>
 
 
     <div id="page_body_script" style="display: none" >

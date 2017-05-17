@@ -7,27 +7,70 @@
                   "items":[{
                       "link":"#pages/Articles",
                       "name":"list"
-                  }]
+                  },{
+                    "link":"#pages/AddEditArticles",
+                    "name":"AddNew"
+                  }
+                  ]
             },{
             "icon":"fa fa-server",
             "name":"Pages",
             "items":[{
-              "url":"https://www.google.com/",
+              "link":"#pages/Pages",
               "name":"list"
+            },{
+              "link":"#pages/AddEditPages",
+              "name":"AddNew"
             }]
             },{
             "icon":"fa fa-sort-amount-asc",
             "name":"Menus",
             "items":[{
-              "url":"https://www.google.com/",
+              "link":"#pages/Menus",
               "name":"list"
+            },{
+              "link":"#pages/AddEditMenus",
+              "name":"AddNew"
             }]
             },{
+            "icon":"fa fa-sliders",
+            "name":"Slider",
+            "items":[{
+              "link":"#pages/Slider",
+              "name":"list"
+            },{
+              "link":"#pages/AddEditSlider",
+              "name":"AddNew"
+            }]
+          },{
+            "icon":"fa fa-th",
+            "name":"Box",
+            "items":[{
+              "link":"#pages/Box",
+              "name":"list"
+            },{
+              "link":"#pages/AddEditBox",
+              "name":"AddNew"
+            }]
+          },{
+            "icon":"fa fa-file-image-o",
+            "name":"File",
+            "items":[{
+              "link":"#pages/File",
+              "name":"list"
+            },{
+              "link":"#pages/AddEditFile",
+              "name":"AddNew"
+            }]
+          },{
             "icon":"fa fa-map-marker",
             "name":"Maps",
             "items":[{
-              "url":"https://www.google.com/",
+              "link":"#pages/Maps",
               "name":"list"
+            },{
+              "link":"#pages/AddEditMaps",
+              "name":"AddNew"
             }]
           },{
             "icon":"fa fa-users",
